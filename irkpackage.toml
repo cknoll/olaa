@@ -1,0 +1,3 @@
+main_module = "olaa.py"
+main_module_prefix = "olaa"
+version = "0.0.1"
