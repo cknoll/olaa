@@ -315,6 +315,19 @@ I2035 = p.create_item(
         "a divide-and-conquer method for fast matrix multiplication, reducing complexity by using 7 recursive multiplications instead of 8" 
 )
 
+I2036 = p.create_item(
+    "I2036",
+    R1__has_label="Iterative Methods for Linear Systems",
+    R2__has_description=
+        "a divide-and-conquer method for fast matrix multiplication, reducing complexity by using 7 recursive multiplications instead of 8" 
+)
+
+I2037 = p.create_item(
+    "I2037",
+    R1__has_label="Matrix Operations",
+    R2__has_description=
+        "a divide-and-conquer method for fast matrix multiplication, reducing complexity by using 7 recursive multiplications instead of 8" 
+)
 # RELATIONS
 
 # Matrix as fundamental part of Linear Algebra, square matrix a subclass of Matrix which further relates to Eigenvalue and Eigenvector
@@ -353,10 +366,64 @@ I2007["Matrix Diagonalization"].set_relation(p.R12["is defined by means of"], I2
 # Linear Transformation as a foundation for Eigenvalues and Eigenvectors
 I2003["Linear Transformation"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
 I2003["Linear Transformation"].set_relation(p.R31["is in mathematical relation with"], I2001["Eigenvector"]) 
-I2003["Linear Transformation"].set_relation(p.R5["is related to"], I2000["Linear Algebra"])
+I2003["Linear Transformation"].set_relation(p.R5["is part to"], I2000["Linear Algebra"])
 
 # Eigen functions
 I2006["Eigen function"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
 I2006["Eigen function"].set_relation(p.R31["is in mathematical relation with"], I2002["Eigenvalue"])
+
+I2023["Simplex Algorithm"].set_relation(p.R5["is part of"], I2002["Linear Algebra"])
+I2024["Krylov Subspace Methods"].set_relation(p.R31["is in mathematical relation with"], I2002["Eigenvalue"])
+I2024["Krylov Subspace Methods"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2024["Krylov Subspace Methods"].set_relation(p.R6["has defining mathematical relation"], I2037["Matrix Operation"])
+
+I2025["Householder Transformation"].set_relation(p.R6["has defining mathematical relation"], I2037["Matrix Operation"])
+I2025["Householder Transformation"].set_relation(p.R6["has defining mathematical relation"], I2005["Matrix"])
+I2025["Householder Transformation"].set_relation(p.R6["has defining mathematical relation"], I2020["QR Factorization"])
+
+I2017["Gaussian Elimination"].set_relation(p.R6["has defining mathematical relation"], I2005["Square Matrix"])
+I2031["Generalized Minimal Residual Method (GMRES)"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2036["Iterative Methods for Linear Systems"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
+I2033["Conjugate Gradient Method"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2033["Conjugate Gradient Method"].set_relation(p.R6["has defining mathematical relation"], I2016["Matrix"])
+
+I2032["Gram-Schmidt Process"].set_relation(p.R6["has defining mathematical relation"], I2004["Geometrical Vector"])
+I2032["Gram-Schmidt Process"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
+I2032["Gram-Schmidt Process"].set_relation(p.R31["is in mathematical relation with"], I2020["QR Factorization"])
+
+I2019["LU Factorization"].set_relation(p.R6["has defining mathematical relation"], I2005["Square Matrix"])
+I2019["LU Factorization"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
+I2020["QR Factorization"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
+I2020["QR Factorization"].set_relation(p.R6["has defining mathematical relation"], I2002["Eigenvalue"])
+I2020["QR Factorization"].set_relation(p.R31["is in mathematical relation with"], I2005["Square Matrix"])
+
+I2021["Cholesky Decomposition"].set_relation(p.R6["has defining mathematical relation"], I2016["Matrix"])
+I2022["Fast Fourier Transform (FFT)"].set_relation(p.R31["is in mathematical relation with"], I2003["Linear Transformation"])
+
+I2028["Jacobi Method"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2028["Jacobi Method"].set_relation(p.R31["is in mathematical relation with"], I2029["Gauss-Seidel Method"])
+
+I2030["Successive Over-Relaxation (SOR)"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2030["Successive Over-Relaxation (SOR)"].set_relation(p.R31["is in mathematical relation with"], I2029["Gauss-Seidel Method"])
+
+I2029["Gauss-Seidel Method"].set_relation(p.R3["a subclass of"], I2036["Iterative Methods for Linear Systems"])
+I2027["Lanczos Algorithm"].set_relation(p.R6["has defining mathematical relation"], I2002["Eigenvalue"])
+I2027["Lanczos Algorithm"].set_relation(p.R3["is subclass of"], I2024["Krylov Subspace Methods"])
+
+I2026["Arnoldi Iteration"].set_relation(p.R6["has defining mathematical relation"], I2002["Eigenvalue"])
+I2026["Arnoldi Iteration"].set_relation(p.R3["is subclass of"], I2024["Krylov Subspace Methods"])
+I2018["Eigenvalue Decomposition"].set_relation(p.R3["is subclass of"], I2008["Spectral Decomposition"])
+
+I2034["Matrix Multiplication Algorithm"].set_relation(p.R5["is part of"], I2000["Linear Algebra"])
+I2034["Matrix Multiplication Algorithm"].set_relation(p.R6["has defining mathematical relation"], I2016["Matrix"])
+I2035["Strassen's Algorithm"].set_relation(p.R3["is subclass of"], I2034["Matrix Multiplication Algorithm"])
+I2035["Strassen's Algorithm"].set_relation(p.R6["has defining mathematical relation"], I2016["Matrix"])
+
+# Since Strassens Algorithm and Jocobi operate on square matrices
+I2035["Strassen's Algorithm"].set_relation(p.R8["has domain of argument 1"], I2005["Square Matrix"])
+I2035["Strassen's Algorithm"].set_relation(p.R9["has domain of argument 2"], I2005["Square Matrix"])
+I2028["Jacobi Method"].set_relation(p.R8["has domain of argument 1"], I2005["Square Matrix"])
+I2028["Jacobi Method"].set_relation(p.R8["has domain of argument 2"], I2005["Square Matrix"])
+
 
 p.end_mod()
