@@ -174,6 +174,147 @@ I2016 = p.create_item(
         "A matrix is a structured, rectangular arrangement of elements organized in rows and columns, "
         "used to represent data or solve mathematical problems." 
 )
+
+# ALGORITHMS IMPORTANT FROM LINEAR ALGEBRA POV
+
+I2017 = p.create_item(
+    "I2017",
+    R1__has_label="Gaussian Elimination",
+    R2__has_description=
+        "Solves systems of linear equations by transforming the augmented matrix into row echelon form" 
+)
+
+I2018 = p.create_item(
+    "I2018",
+    R1__has_label="Eigenvalue Decomposition",
+    R2__has_description=
+        "Factors a square matrix into a set of eigenvectors and eigenvalues, important for "
+        "principal component analysis and solving differential equations" 
+)
+
+I2019 = p.create_item(
+    "I2019",
+    R1__has_label="LU Factorization",
+    R2__has_description=
+        "Decomposes a matrix into lower and upper triangular matrices, useful for solving linear systems and matrix inversion" 
+)
+
+I2020 = p.create_item(
+    "I2020",
+    R1__has_label="QR Factorization",
+    R2__has_description=
+        "Decomposes a matrix into an orthogonal matrix Q and an upper triangular matrix R, used for "
+        "least squares problems and eigenvalue computations" 
+)
+
+I2021 = p.create_item(
+    "I2021",
+    R1__has_label="Cholesky Decomposition",
+    R2__has_description=
+        "Factorizes a Hermitian, positive-definite matrix into a lower triangular matrix and its "
+        "conjugate transpose, useful for efficient numerical solutions" 
+)
+
+I2022 = p.create_item(
+    "I2022",
+    R1__has_label="Fast Fourier Transform (FFT)",
+    R2__has_description=
+        "It uses matrix operations for efficient computation of the discrete Fourier transform"
+        " although not strictly Linear Algebra algorithm"
+)
+
+I2023 = p.create_item(
+    "I2023",
+    R1__has_label="Simplex Algorithm",
+    R2__has_description=
+        "Although primarily an optimization algorithm, it uses linear algebra concepts to solve linear programming problems" 
+)
+
+I2024 = p.create_item(
+    "I2024",
+    R1__has_label="Krylov Subspace Methods",
+    R2__has_description=
+        "A class of iterative algorithms for solving large linear systems and eigenvalue problems," 
+)
+
+I2025 = p.create_item(
+    "I2025",
+    R1__has_label="Householder Transformation",
+    R2__has_description=
+        "Used in QR factorization and for reducing matrices to simpler forms" 
+)
+
+I2026 = p.create_item(
+    "I2026",
+    R1__has_label="Arnoldi Iteration",
+    R2__has_description=
+        "Generates an orthonormal basis for the Krylov subspace, used in eigenvalue problems and solving large, sparse linear systems" 
+)
+
+I2027 = p.create_item(
+    "I2027",
+    R1__has_label="Lanczos Algorithm",
+    R2__has_description=
+        "A method for finding eigenvalues and eigenvectors of large, sparse symmetric matrices" 
+)
+
+I2028 = p.create_item(
+    "I2028",
+    R1__has_label="Jacobi Method",
+    R2__has_description=
+        "An iterative algorithm for solving diagonally dominant systems of linear equations" 
+)
+
+I2029 = p.create_item(
+    "I2029",
+    R1__has_label="Gauss-Seidel Method",
+    R2__has_description=
+        "An iterative method for solving systems of linear equations, often faster than the Jacobi method" 
+)
+
+I2030 = p.create_item(
+    "I2030",
+    R1__has_label="Successive Over-Relaxation (SOR)",
+    R2__has_description=
+        "An iterative method that improves upon the Gauss-Seidel method for solving linear systems" 
+)
+
+I2031 = p.create_item(
+    "I2031",
+    R1__has_label="Generalized Minimal Residual Method (GMRES)",
+    R2__has_description=
+        "An iterative method for solving non-symmetric linear systems" 
+)
+
+I2032 = p.create_item(
+    "I2032",
+    R1__has_label="Gram-Schmidt Process",
+    R2__has_description=
+        "Orthogonalizes a set of vectors, used in QR factorization and creating orthonormal bases" 
+)
+
+I2033 = p.create_item(
+    "I2033",
+    R1__has_label="Conjugate Gradient Method",
+    R2__has_description=
+        "An iterative algorithm for solving large, sparse systems of linear equations, "
+        "particularly effective for symmetric, positive-definite matrices" 
+)
+
+I2034 = p.create_item(
+    "I2034",
+    R1__has_label="Matrix Multiplication Algorithm",
+    R2__has_description=
+        "Efficient methods for multiplying matrices, crucial for many linear algebra operations" 
+)
+
+I2035 = p.create_item(
+    "I2035",
+    R1__has_label="Strassen's Algorithm",
+    R2__has_description=
+        "a divide-and-conquer method for fast matrix multiplication, reducing complexity by using 7 recursive multiplications instead of 8" 
+)
+
 # RELATIONS
 
 # Matrix as fundamental part of Linear Algebra, square matrix a subclass of Matrix which further relates to Eigenvalue and Eigenvector
